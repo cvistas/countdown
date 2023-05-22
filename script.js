@@ -9,9 +9,9 @@ var elapsedFunction = setInterval(function() {
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    document.getElementById("days").innerHTML = days + "d ";
-    document.getElementById("hours").innerHTML = hours + "h ";
-    document.getElementById("minutes").innerHTML = minutes + "m ";
-    document.getElementById("seconds").innerHTML = seconds + "s ";
+    document.getElementById("days").innerHTML = days + (days == 1 ? " dia " : " dias ");
+    document.getElementById("hours").innerHTML = hours + (hours == 1 ? " hora " : " horas ");
+    document.getElementById("minutes").innerHTML = minutes + (minutes == 1 ? " minuto " : " minutos ");
+    document.getElementById("seconds").innerHTML = seconds + (seconds == 1 ? " segundo" : " segundos");
     document.getElementById("message").innerHTML = "O FCP está sem penalties há";
 }, 1000);
