@@ -15,3 +15,4 @@ var elapsedFunction = setInterval(function() {
     document.getElementById("seconds").innerHTML = seconds + (seconds == 1 ? " segundo" : " segundos");
     document.getElementById("message").innerHTML = "O FCP está sem penalties há";
 }, 1000);
+
