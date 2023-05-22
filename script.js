@@ -13,5 +13,5 @@ var elapsedFunction = setInterval(function() {
     document.getElementById("hours").innerHTML = hours + "h ";
     document.getElementById("minutes").innerHTML = minutes + "m ";
     document.getElementById("seconds").innerHTML = seconds + "s ";
-
+    document.getElementById("message").innerHTML = "O FCP está sem penalties há";
 }, 1000);
