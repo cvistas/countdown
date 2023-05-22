@@ -1,4 +1,4 @@
-var pastDate = new Date("May 22, 2023 00:00:00").getTime();
+var pastDate = new Date("May 20, 2023 22:27:00").getTime();
 
 var elapsedFunction = setInterval(function() {
     var now = new Date().getTime();
