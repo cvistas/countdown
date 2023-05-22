@@ -16,3 +16,24 @@ var elapsedFunction = setInterval(function() {
     document.getElementById("message").innerHTML = "O FCP está sem penalties há";
 }, 1000);
 
+var stopwatchInterval;
+var stopwatchTime = 0;
+
+document.getElementById("stopwatch-start").addEventListener("click", function() {
+    stopwatchInterval = setInterval(function() {
+        stopwatchTime++;
+        var minutes = Math.floor(stopwatchTime / 60);
+        var seconds = stopwatchTime % 60;
+        document.getElementById("stopwatch-time").innerHTML = minutes + ":" + (seconds < 10 ? "0" + seconds : seconds);
+    }, 1000);
+});
+
+document.getElementById("stopwatch-stop").addEventListener("click", function() {
+    clearInterval(stopwatchInterval);
+});
+
+document.getElementById("stopwatch-reset").addEventListener("click", function() {
+    clearInterval(stopwatchInterval);
+    stopwatchTime = 0;
+    document.getElementById("stopwatch-time").innerHTML = "0:00";
+});
