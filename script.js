@@ -1,4 +1,4 @@
-vvar pastDate = new Date("May 20, 2023 22:27:00").getTime();
+var pastDate = new Date("May 20, 2023 22:27:00").getTime();
 
 var elapsedFunction = setInterval(function() {
     var now = new Date().getTime();
@@ -29,5 +29,11 @@ document.getElementById("stopwatch-start").addEventListener("click", function() 
 });
 
 document.getElementById("stopwatch-stop").addEventListener("click", function() {
-quote("document.getElementById(\"stopwatch-stop\").addEventListener(\"click\", function() {", "clearInterval(stopwatchInterval);\n});")
-quote("document.getElementById(\"stopwatch-reset\").addEventListener(\"click\", function() {", "document.getElementById(\"stopwatch-time\").innerHTML = \"0:00\";\n});")
+    clearInterval(stopwatchInterval);
+});
+
+document.getElementById("stopwatch-reset").addEventListener("click", function() {
+    clearInterval(stopwatchInterval);
+    stopwatchTime = 0;
+    document.getElementById("stopwatch-time").innerHTML = "0:00";
+});
